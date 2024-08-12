@@ -16025,6 +16025,11 @@ footer .copy {
     color: var(--normal-color)
 }
 
+.notify-user__subscribe-email{
+    visibility: hidden;
+    display: none;
+}
+
 .notify-user__subscribe-email-icon {
     width: 20px;
     height: 20px;
