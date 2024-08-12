@@ -1,573 +1,509 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="icon" type="image/svg+xml" href="static/favicon.svg">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <link rel="stylesheet" href="./style.css">
-        <title>Chazown</title>
-    </head>
-    <body>
-        <nav class="navigation">
-            <div class="navigation__logo">
-                <!-- <div class="navigation__logo-logomark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="static/favicon.svg" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Chazown</title>
+  </head>
+  <body>
+    <nav class="navigation">
+      <div class="navigation__logo">
+        <!-- <div class="navigation__logo-logomark">
                     <img src="./Assets/logo/LOGO.png" class="white"></div>
                 </div> -->
-                <h1 class="navigation__logo-title">CHAZOWN</h1>
+        <h1 class="navigation__logo-title">CHAZOWN</h1>
+      </div>
+    </nav>
+    <main id="primary">
+      <div class="wrapper">
+        <div class="box notify-user">
+          <div class="round-player">
+            <div class="round-player__wrapper">
+              <audio id="track" loop>
+                <source src="./Assets/audio.mp3" type="audio/mpeg" />
+              </audio>
+              <button id="playButton" class="buttong"></button>
+              <div class="round-player__text">
+                We are coming soon * Stay tuned *
+              </div>
             </div>
-
-        </nav>
-        <main id="primary">
-            <div class="wrapper">
-                <div class="box notify-user">
-                    <div class="round-player">
-                        <div class="round-player__wrapper">
-                            <audio id="track" loop>
-                                <source src="./static/audio.mp3" type="audio/mpeg">
-                            </audio>
-                            <button id="playButton" class="buttong"></button>
-                            <div class="round-player__text">We are coming soon * Stay tuned *</div>
-                        </div>
-                    </div>
-                    <div class="notify-user__content">
-                        <h2 class="notify-user__title">
-                            We are currently working hard on an <strong>awesome</strong>
-                            new website design. <strong>Stay tuned for the big reveal!</strong>
-                        </h2>
-                        <figure class="notify-user__svg-container">
-                            <svg viewBox="0 0 126 47" class="notify-user__doodle" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2 23.8452C3.48583 29.8152 13.3921 33.8854 18.4647 35.2233C24.7441 36.8795 32.5545 37.6925 38.6433 34.9124C47.4047 30.9121 53.0167 19.9215 42.5429 14.3323C35.0248 10.3204 27.1754 12.4436 23.726 20.3633C19.8167 29.339 23.8859 38.7097 32.8869 41.7517C46.5821 46.3801 63.4395 47.0469 75.101 37.1507C82.8253 30.5957 89.5748 17.4056 81.6621 8.3013C78.0351 4.12803 68.6212 1.1552 63.9594 5.5034C60.0075 9.18954 60.2113 15.5503 62.7524 20.1768C72.046 37.097 100.027 36.0395 112.27 23.2856C117.289 18.0579 120.38 10.1426 113.942 4.32207C110.925 1.59474 104.396 1.00873 101.438 3.9801C95.8599 9.5836 92.8823 16.9327 95.0629 24.9643C96.5053 30.2769 102.327 34.7147 107.009 36.9642C112.226 39.4707 118.342 42.4832 124 43.4304" stroke="#5FACBA" stroke-width="3" stroke-linecap="round"/>
-                            </svg>
-                        </figure>
-                        <form class="notify-user__subscribe">
-                            <div class="notify-user__subscribe-input-group">
-                                <input class="notify-user__subscribe-email" type="email" id="email" name="email" placeholder="youremail@gmail.com" required>
-                                <svg viewBox="0 0 18 18" class="notify-user__subscribe-email-icon">
-                                    <path d="M11.5,10.5 C6.4987941,17.5909626 1,3.73719105 11.5,6 C10.4594155,14.5485365 17,13.418278 17,9 C17,4.581722 13.418278,1 9,1 C4.581722,1 1,4.581722 1,9 C1,13.418278 4.581722,17 9,17 C13.418278,17 17,13.42 17,9"></path>
-                                    <polyline points="5 9.25 8 12 13 6"></polyline>
-                                </svg>
-                            </div>
-                            <a class="ffbtn ffbtn--black ffbtn--fillin ffbtn--full ffbtn--lg notify-user__subscribe-button">
-                                <span class="ffbtn__border"></span>
-                                <span class="ffbtn__bubble">
-                                    <span></span>
-                                </span>
-                                <span class="ffbtn__title">
-                                    <span data-text="Get Notified Once We Launch">Get Notified Once We Launch</span>
-                                </span>
-                            </a>
-                        </form>
-                        <div class="notify-user__success">
-                            <div class="notify-user__success-icon">
-                                <i class="fa-circle-check fa-regular"></i>
-                            </div>
-                            <h2 class="notify-user__success-title">Thank you for subscribing!</h2>
-                            <p class="notify-user__success-description">We will notify you once we launch</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="box about-team">
-                    <div class="about-team__content">
-                        <div class="about-team__info">
-                            <div class="about-team__label">About our Team</div>
-                            <p class="about-team__description">Our team consists of true professionals, dedicated to delivering exceptional results.</p>
-                        </div>
-                        <div class="about-team__image">
-                            <picture>
-                                <source srcset="./Assets/img/featured-face.webp" type="image/webp">
-                                <img src="./Assets/img/featured-face.webp" alt="">
-                            </picture>
-                        </div>
-                    </div>
-                    <div class="about-team__users">
-                        <div class="about-team__users-header">
-                            <div class="about-team__users-label">About our Team</div>
-                            <div class="about-team__users-btn-close">
-                                <svg viewBox="0 0 24 24" fill="none" class="close-popup" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.10083 1.36702C3.34584 0.612034 2.12177 0.612034 1.36678 1.36702C0.61179 2.12201 0.61179 3.34609 1.36678 4.10108L9.26579 12.0001L1.36695 19.8989C0.611958 20.6539 0.611958 21.878 1.36695 22.633C2.12193 23.388 3.34601 23.388 4.101 22.633L11.9998 14.7341L19.8987 22.633C20.6537 23.388 21.8777 23.388 22.6327 22.633C23.3877 21.878 23.3877 20.6539 22.6327 19.8989L14.7339 12.0001L22.6329 4.10109C23.3879 3.3461 23.3879 2.12203 22.6329 1.36704C21.8779 0.612051 20.6538 0.612051 19.8988 1.36704L11.9998 9.26603L4.10083 1.36702Z" fill="#AD5E00"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="about-team__users-content">
-                            <ul class="about-team__cards">
-                                <li class="about-team__card">
-                                    <div class="about-team__card-avatar">
-                                        <picture>
-                                            <source srcset="images/avatar_1.webp" type="image/webp">
-                                            <img src="images/avatar_1.png" alt="">
-                                        </picture>
-                                    </div>
-                                    <div class="about-team__card-details">
-                                        <div class="about-team__card-name">Sarah Miller</div>
-                                        <div class="about-team__card-position">Lead Designer</div>
-                                        <ul class="about-team__card-social-links">
-                                            <li class="about-team__facebook">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-facebook"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__twitter">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-x-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__linkedin">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-linkedin"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__instagram">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-instagram"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__pinterest">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-pinterest"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="about-team__card">
-                                    <div class="about-team__card-avatar">
-                                        <picture>
-                                            <source srcset="images/avatar_2.webp" type="image/webp">
-                                            <img src="images/avatar_2.png" alt="">
-                                        </picture>
-                                    </div>
-                                    <div class="about-team__card-details">
-                                        <div class="about-team__card-name">Mark Harrison</div>
-                                        <div class="about-team__card-position">Lead Developer</div>
-                                        <ul class="about-team__card-social-links">
-                                            <li class="about-team__facebook">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-facebook"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__twitter">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-x-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__linkedin">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-linkedin"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__instagram">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-instagram"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__pinterest">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-pinterest"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="about-team__card">
-                                    <div class="about-team__card-avatar">
-                                        <picture>
-                                            <source srcset="images/avatar_3.webp" type="image/webp">
-                                            <img src="images/avatar_3.png" alt="">
-                                        </picture>
-                                    </div>
-                                    <div class="about-team__card-details">
-                                        <div class="about-team__card-name">Desmond Pitardi</div>
-                                        <div class="about-team__card-position">UI/UX Designer</div>
-                                        <ul class="about-team__card-social-links">
-                                            <li class="about-team__facebook">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-facebook"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__twitter">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-x-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__linkedin">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-linkedin"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__instagram">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-instagram"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__pinterest">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-pinterest"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="about-team__card">
-                                    <div class="about-team__card-avatar">
-                                        <picture>
-                                            <source srcset="images/avatar_4.webp" type="image/webp">
-                                            <img src="images/avatar_4.png" alt="">
-                                        </picture>
-                                    </div>
-                                    <div class="about-team__card-details">
-                                        <div class="about-team__card-name">Jessica Simon</div>
-                                        <div class="about-team__card-position">Marketing Specialist</div>
-                                        <ul class="about-team__card-social-links">
-                                            <li class="about-team__facebook">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-facebook"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__twitter">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-x-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__linkedin">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-linkedin"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__instagram">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-instagram"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__pinterest">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-pinterest"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="about-team__card">
-                                    <div class="about-team__card-avatar">
-                                        <picture>
-                                            <source srcset="images/avatar_5.webp" type="image/webp">
-                                            <img src="images/avatar_5.png" alt="">
-                                        </picture>
-                                    </div>
-                                    <div class="about-team__card-details">
-                                        <div class="about-team__card-name">Coco Fratelli</div>
-                                        <div class="about-team__card-position">HR</div>
-                                        <ul class="about-team__card-social-links">
-                                            <li class="about-team__facebook">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-facebook"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__twitter">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-x-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__linkedin">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-linkedin"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__instagram">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-instagram"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__pinterest">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-pinterest"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="about-team__card">
-                                    <div class="about-team__card-avatar">
-                                        <picture>
-                                            <source srcset="images/avatar_6.webp" type="image/webp">
-                                            <img src="images/avatar_6.png" alt="">
-                                        </picture>
-                                    </div>
-                                    <div class="about-team__card-details">
-                                        <div class="about-team__card-name">Brian Filbert</div>
-                                        <div class="about-team__card-position">DevOps Engineer</div>
-                                        <ul class="about-team__card-social-links">
-                                            <li class="about-team__facebook">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-facebook"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__twitter">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-x-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__linkedin">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-linkedin"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__instagram">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-instagram"></i>
-                                                </a>
-                                            </li>
-                                            <li class="about-team__pinterest">
-                                                <a href="javascript:void(0);">
-                                                    <i class="fa-brands fa-pinterest"></i>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="box launch-date">
-                    <div class="launch-date__content">
-                        <div class="launch-date__slider">
-                            <div class="launch-date__slider-content">
-                                <div class="swiper">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <h2 class="swiper-slide-title">
-                                                3<span>+</span>
-                                            </h2>
-                                            <p>Years Experience</p>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <h2 class="swiper-slide-title">
-                                                17<span>+</span>
-                                            </h2>
-                                            <p>Successful Projects Completed</p>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <h2 class="swiper-slide-title">200<span>+</span></h2>
-                                            <p>Manpower</p>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-pagination"></div>
-                                </div>
-                            </div>
-                            <div class="launch-date__slider-left-part"></div>
-                            <div class="launch-date__slider-right-part"></div>
-                        </div>
-                        <div class="launch-date__calendar">
-                            <div class="launch-date__calendar-content">
-                                <span class="launch-date__calendar-label">Launch Date</span>
-                                <time class="launch-date__calendar-date" datetime="2023-12-21">21</time>
-                                <p class="launch-date__calendar-month">December</p>
-                            </div>
-                            <div class="launch-date__calendar-left-part"></div>
-                            <div class="launch-date__calendar-right-part"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box counter">
-                    <div class="counter__content">
-                        <ul class="counter__month"></ul>
-                        <div class="counter__countdown">
-                            <ul class="counter__countdown-timer">
-                                <li id="days">
-                                    1<span>days</span>
-                                </li>
-                                <li class="counter__countdown-colon">:</li>
-                                <li id="hours">
-                                    2<span>hours</span>
-                                </li>
-                                <li class="counter__countdown-colon">:</li>
-                                <li id="minutes">
-                                    3<span>minutes</span>
-                                </li>
-                                <li class="counter__countdown-colon">:</li>
-                                <li id="seconds">
-                                    4<span>seconds</span>
-                                </li>
-                            </ul>
-                            <div class="counter__countdown-decoration">
-                                <div class="counter__countdown-decoration-arrow"></div>
-                                <div class="counter__countdown-decoration-arrow"></div>
-                                <div class="counter__countdown-decoration-arrow"></div>
-                            </div>
-                            <div class="counter__countdown-percent">
-                                0<span>%</span>
-                            </div>
-                        </div>
-                        <div class="counter__progressbar">
-                            <progress id="progressBar" class="counter__progress" max="100" value="0"></progress>
-                            <div id="endTip"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box journal">
-                    <div class="journal__content">
-                        <div class="journal__header">
-                            <div class="journal__header-label">Our Recent Updates</div>
-                            <div class="journal__header-icon">
-                                <a href="javascript:void(0);">
-                                    <i class="fa-brands fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="journal__posts">
-                            <div class="journal__posts-wrapper">
-                                <article class="journal__post">
-                                    <header class="journal__post-heading">
-                                        <div class="journal__post-date">
-                                            <time class="journal__post-day" datetime="2023-05-12">12 May 2023</time>
-                                            <time class="journal__post-time" datetime="2023-05-12T17:23">5:23 PM</time>
-                                        </div>
-                                        <div class="journal__post-share">
-                                            <ul class="journal__post-social-links">
-                                                <li>
-                                                    <span>Share:</span>
-                                                </li>
-                                                <li class="journal__post-facebook">
-                                                    <a href="javascript:void(0);">
-                                                        <i class="fa-brands fa-facebook"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="journal__post-twitter">
-                                                    <a href="javascript:void(0);">
-                                                        <i class="fa-brands fa-twitter"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="journal__post-linkedin">
-                                                    <a href="javascript:void(0);">
-                                                        <i class="fa-brands fa-linkedin"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="journal__post-instagram">
-                                                    <a href="javascript:void(0);">
-                                                        <i class="fa-brands fa-instagram"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="journal__post-pinterest">
-                                                    <a href="javascript:void(0);">
-                                                        <i class="fa-brands fa-pinterest"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </header>
-                                    <h1 class="journal__post-header">Working on a new design. Right now finished dashbord.</h1>
-                                    <figure class="journal__post-image">
-                                        <img src="images/google-deepmind-1.jpg" alt="Description of the image">
-                                    </figure>
-                                    <div class="journal__post-text">
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
-                                    </div>
-                                </article>
-                                <article class="journal__post">
-                                    <header class="journal__post-heading">
-                                        <div class="journal__post-date">
-                                            <time class="journal__post-day" datetime="2023-05-12">12 May 2023</time>
-                                            <time class="journal__post-time" datetime="2023-05-12T17:23">5:23 PM</time>
-                                        </div>
-                                        <div class="journal__post-share">
-                                            <ul class="journal__post-social-links">
-                                                <li>
-                                                    <span>Share:</span>
-                                                </li>
-                                                <li class="journal__post-facebook">
-                                                    <a href="javascript:void(0);">
-                                                        <i class="fa-brands fa-facebook"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="journal__post-twitter">
-                                                    <a href="javascript:void(0);">
-                                                        <i class="fa-brands fa-twitter"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="journal__post-linkedin">
-                                                    <a href="javascript:void(0);">
-                                                        <i class="fa-brands fa-linkedin"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="journal__post-instagram">
-                                                    <a href="javascript:void(0);">
-                                                        <i class="fa-brands fa-instagram"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="journal__post-pinterest">
-                                                    <a href="javascript:void(0);">
-                                                        <i class="fa-brands fa-pinterest"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </header>
-                                    <h1 class="journal__post-header">Working on a new design. Right now finished dashbord.</h1>
-                                    <figure class="journal__post-image">
-                                        <img src="images/google-deepmind-2.jpg" alt="Description of the image">
-                                    </figure>
-                                    <div class="journal__post-text">
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
-                                    </div>
-                                </article>
-                                <article class="journal__post">
-                                    <header class="journal__post-heading">
-                                        <div class="journal__post-date">
-                                            <time class="journal__post-day" datetime="2023-05-12">12 May 2023</time>
-                                            <time class="journal__post-time" datetime="2023-05-12T17:23">5:23 PM</time>
-                                        </div>
-                                        <div class="journal__post-share">
-                                            <ul class="journal__post-social-links">
-                                                <li>
-                                                    <span>Share:</span>
-                                                </li>
-                                                <li class="journal__post-facebook">
-                                                    <a href="javascript:void(0);">
-                                                        <i class="fa-brands fa-facebook"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="journal__post-twitter">
-                                                    <a href="javascript:void(0);">
-                                                        <i class="fa-brands fa-twitter"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="journal__post-linkedin">
-                                                    <a href="javascript:void(0);">
-                                                        <i class="fa-brands fa-linkedin"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="journal__post-instagram">
-                                                    <a href="javascript:void(0);">
-                                                        <i class="fa-brands fa-instagram"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="journal__post-pinterest">
-                                                    <a href="javascript:void(0);">
-                                                        <i class="fa-brands fa-pinterest"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </header>
-                                    <h1 class="journal__post-header">Working on a new design. Right now finished dashbord.</h1>
-                                    <figure class="journal__post-image">
-                                        <img src="images/google-deepmind-3.jpg" alt="Description of the image">
-                                    </figure>
-                                    <div class="journal__post-text">
-                                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.</p>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="notify-user__content">
+            <h2 class="notify-user__title">
+              <strong>Happy 3rd Anniversary to CHAZOWN!</strong>🎉 As a token of our
+              appreciation and to celebrate this milestone, we’re thrilled to
+              present you with a special gift—a brand-new website that we’ve
+              meticulously built for our company. This website represents not
+              only our collective efforts and dedication but also the bright
+              future we envision for CHAZOWN. <strong> you for your inspiring
+              leadership and unwavering support.</strong> Here’s to many more years of
+              success and innovation!
+            </h2>
+            <figure class="notify-user__svg-container">
+              <svg
+                viewBox="0 0 126 47"
+                class="notify-user__doodle"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M2 23.8452C3.48583 29.8152 13.3921 33.8854 18.4647 35.2233C24.7441 36.8795 32.5545 37.6925 38.6433 34.9124C47.4047 30.9121 53.0167 19.9215 42.5429 14.3323C35.0248 10.3204 27.1754 12.4436 23.726 20.3633C19.8167 29.339 23.8859 38.7097 32.8869 41.7517C46.5821 46.3801 63.4395 47.0469 75.101 37.1507C82.8253 30.5957 89.5748 17.4056 81.6621 8.3013C78.0351 4.12803 68.6212 1.1552 63.9594 5.5034C60.0075 9.18954 60.2113 15.5503 62.7524 20.1768C72.046 37.097 100.027 36.0395 112.27 23.2856C117.289 18.0579 120.38 10.1426 113.942 4.32207C110.925 1.59474 104.396 1.00873 101.438 3.9801C95.8599 9.5836 92.8823 16.9327 95.0629 24.9643C96.5053 30.2769 102.327 34.7147 107.009 36.9642C112.226 39.4707 118.342 42.4832 124 43.4304"
+                  stroke="#5FACBA"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </figure>
+            <form class="notify-user__subscribe">
+              
+              <a href="https://website-chazown.vercel.app/index.html" target="_blank"
+                class="ffbtn ffbtn--black ffbtn--fillin ffbtn--full ffbtn--lg notify-user__subscribe-button"
+              >
+                <span class="ffbtn__border"></span>
+                <span class="ffbtn__bubble">
+                  <span></span>
+                </span>
+                <span class="ffbtn__title">
+                  <span data-text="CHAZOWN - AN EPC COMPANY"
+                    >See our gift</span
+                  >
+                </span>
+              </a>
+            </form>
+          </div>
+        </div>
+        <div class="box about-team">
+          <div class="about-team__content">
+            <div class="about-team__info">
+              <div class="about-team__label">About our Team</div>
+              <p class="about-team__description">
+                Our team consists of true professionals, dedicated to delivering
+                exceptional results.
+              </p>
             </div>
-        </main>
-        <footer>
-            <p class="copy">Copyright © 2024 CHAZOWN. All rights Reserved</p>
-        </footer>
-        <script rel="preload" src="./pace.min.js"></script>
-        <script rel="preload" src="./app.min.js"></script>
-    </body>
+            <div class="about-team__image">
+              <picture>
+                <source
+                  srcset="./Assets/img/featured-face.webp"
+                  type="image/webp"
+                />
+                <img src="./Assets/img/featured-face.webp" alt="" />
+              </picture>
+            </div>
+          </div>
+          <div class="about-team__users">
+            <div class="about-team__users-header">
+              <div class="about-team__users-label">About our Team</div>
+              <div class="about-team__users-btn-close">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  class="close-popup"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M4.10083 1.36702C3.34584 0.612034 2.12177 0.612034 1.36678 1.36702C0.61179 2.12201 0.61179 3.34609 1.36678 4.10108L9.26579 12.0001L1.36695 19.8989C0.611958 20.6539 0.611958 21.878 1.36695 22.633C2.12193 23.388 3.34601 23.388 4.101 22.633L11.9998 14.7341L19.8987 22.633C20.6537 23.388 21.8777 23.388 22.6327 22.633C23.3877 21.878 23.3877 20.6539 22.6327 19.8989L14.7339 12.0001L22.6329 4.10109C23.3879 3.3461 23.3879 2.12203 22.6329 1.36704C21.8779 0.612051 20.6538 0.612051 19.8988 1.36704L11.9998 9.26603L4.10083 1.36702Z"
+                    fill="#AD5E00"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="about-team__users-content">
+              <ul class="about-team__cards">
+                <li class="about-team__card">
+                  <div class="about-team__card-avatar">
+                    <picture>
+                      <source srcset="images/avatar_1.webp" type="image/webp" />
+                      <img src="images/avatar_1.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="about-team__card-details">
+                    <div class="about-team__card-name">Sarah Miller</div>
+                    <div class="about-team__card-position">Lead Designer</div>
+                    <ul class="about-team__card-social-links">
+                      <li class="about-team__facebook">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__twitter">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__linkedin">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__instagram">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-instagram"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__pinterest">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-pinterest"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="about-team__card">
+                  <div class="about-team__card-avatar">
+                    <picture>
+                      <source srcset="images/avatar_2.webp" type="image/webp" />
+                      <img src="images/avatar_2.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="about-team__card-details">
+                    <div class="about-team__card-name">Mark Harrison</div>
+                    <div class="about-team__card-position">Lead Developer</div>
+                    <ul class="about-team__card-social-links">
+                      <li class="about-team__facebook">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__twitter">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__linkedin">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__instagram">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-instagram"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__pinterest">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-pinterest"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="about-team__card">
+                  <div class="about-team__card-avatar">
+                    <picture>
+                      <source srcset="images/avatar_3.webp" type="image/webp" />
+                      <img src="images/avatar_3.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="about-team__card-details">
+                    <div class="about-team__card-name">Desmond Pitardi</div>
+                    <div class="about-team__card-position">UI/UX Designer</div>
+                    <ul class="about-team__card-social-links">
+                      <li class="about-team__facebook">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__twitter">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__linkedin">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__instagram">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-instagram"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__pinterest">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-pinterest"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="about-team__card">
+                  <div class="about-team__card-avatar">
+                    <picture>
+                      <source srcset="images/avatar_4.webp" type="image/webp" />
+                      <img src="images/avatar_4.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="about-team__card-details">
+                    <div class="about-team__card-name">Jessica Simon</div>
+                    <div class="about-team__card-position">
+                      Marketing Specialist
+                    </div>
+                    <ul class="about-team__card-social-links">
+                      <li class="about-team__facebook">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__twitter">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__linkedin">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__instagram">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-instagram"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__pinterest">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-pinterest"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="about-team__card">
+                  <div class="about-team__card-avatar">
+                    <picture>
+                      <source srcset="images/avatar_5.webp" type="image/webp" />
+                      <img src="images/avatar_5.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="about-team__card-details">
+                    <div class="about-team__card-name">Coco Fratelli</div>
+                    <div class="about-team__card-position">HR</div>
+                    <ul class="about-team__card-social-links">
+                      <li class="about-team__facebook">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__twitter">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__linkedin">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__instagram">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-instagram"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__pinterest">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-pinterest"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="about-team__card">
+                  <div class="about-team__card-avatar">
+                    <picture>
+                      <source srcset="images/avatar_6.webp" type="image/webp" />
+                      <img src="images/avatar_6.png" alt="" />
+                    </picture>
+                  </div>
+                  <div class="about-team__card-details">
+                    <div class="about-team__card-name">Brian Filbert</div>
+                    <div class="about-team__card-position">DevOps Engineer</div>
+                    <ul class="about-team__card-social-links">
+                      <li class="about-team__facebook">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__twitter">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__linkedin">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__instagram">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-instagram"></i>
+                        </a>
+                      </li>
+                      <li class="about-team__pinterest">
+                        <a href="javascript:void(0);">
+                          <i class="fa-brands fa-pinterest"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="box launch-date">
+          <div class="launch-date__content">
+            <div class="launch-date__slider">
+              <div class="launch-date__slider-content">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <h2 class="swiper-slide-title">3<span>+</span></h2>
+                      <p>Years Experience</p>
+                    </div>
+                    <div class="swiper-slide">
+                      <h2 class="swiper-slide-title">17<span>+</span></h2>
+                      <p>Successful Projects Completed</p>
+                    </div>
+                    <div class="swiper-slide">
+                      <h2 class="swiper-slide-title">200<span>+</span></h2>
+                      <p>Manpower</p>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+              <div class="launch-date__slider-left-part"></div>
+              <div class="launch-date__slider-right-part"></div>
+            </div>
+            <div class="launch-date__calendar">
+              <div class="launch-date__calendar-content">
+                <span class="launch-date__calendar-label">Launch Date</span>
+                <time class="launch-date__calendar-date" datetime="2024-08-12"
+                  >21</time
+                >
+                <p class="launch-date__calendar-month">December</p>
+              </div>
+              <div class="launch-date__calendar-left-part"></div>
+              <div class="launch-date__calendar-right-part"></div>
+            </div>
+          </div>
+        </div>
+        <div class="box counter">
+          <div class="counter__content">
+            <ul class="counter__month"></ul>
+            <div class="counter__countdown">
+              <ul class="counter__countdown-timer">
+                <li id="days">1<span>days</span></li>
+                <li class="counter__countdown-colon">:</li>
+                <li id="hours">2<span>hours</span></li>
+                <li class="counter__countdown-colon">:</li>
+                <li id="minutes">3<span>minutes</span></li>
+                <li class="counter__countdown-colon">:</li>
+                <li id="seconds">4<span>seconds</span></li>
+              </ul>
+              <div class="counter__countdown-decoration">
+                <div class="counter__countdown-decoration-arrow"></div>
+                <div class="counter__countdown-decoration-arrow"></div>
+                <div class="counter__countdown-decoration-arrow"></div>
+              </div>
+              <div class="counter__countdown-percent">0<span>%</span></div>
+            </div>
+            <div class="counter__progressbar">
+              <progress
+                id="progressBar"
+                class="counter__progress"
+                max="100"
+                value="0"
+              ></progress>
+              <div id="endTip"></div>
+            </div>
+          </div>
+        </div>
+        <div class="box journal">
+          <div class="journal__content">
+            <div class="journal__header">
+              <div class="journal__header-label">Our Recent Updates</div>
+            </div>
+            <div class="journal__posts">
+              <div class="journal__posts-wrapper">
+                <article class="journal__post">
+                  <h1 class="journal__post-header">JWC</h1>
+                  <figure class="journal__post-image">
+                    <img
+                      src="./Assets/projects/JWC.png"
+                      alt="Description of the image"
+                    />
+                  </figure>
+                  <div class="journal__post-text">
+                    <p>
+                      At JWC in Maharashtra, India, we are undertaking a
+                      comprehensive scope of work encompassing both plumbing and
+                      firefighting systems for a prominent residential building
+                      project. This development features three towers, a
+                      penthouse, and six additional habitable floors, providing
+                      a modern living experience with a diverse array of
+                      amenities. Key highlights of the project include a
+                      luxurious swimming pool, a well-equipped clubhouse, a
+                      state-of-the-art gym, a relaxing salon, and a vibrant
+                      cafeteria
+                    </p>
+                  </div>
+                </article>
+                <article class="journal__post">
+                  <h1 class="journal__post-header">
+                    Joyville Hadapsar Annexe.
+                  </h1>
+                  <figure class="journal__post-image">
+                    <img
+                      src="./Assets/projects/Joyville hadpsar.jpg"
+                      alt="Description of the image"
+                    />
+                  </figure>
+                  <div class="journal__post-text">
+                    <p>
+                      Joyville Hadapsar Annexe in Maharashtra, India, features
+                      our plumbing expertise across three towers, two basements,
+                      and seventeen floors. The project includes premium
+                      amenities such as a swimming pool, clubhouse, gym, salon,
+                      cafeteria, yoga studio, tennis court, jogging park, spa,
+                      kids' play area, and an amphitheatre, all designed to
+                      offer a high-quality residential experience.
+                    </p>
+                  </div>
+                </article>
+                <article class="journal__post">
+                  <h1 class="journal__post-header">9PBR</h1>
+                  <figure class="journal__post-image">
+                    <img
+                      src="./Assets/projects/9PBR-Seawoods.png"
+                      alt="Description of the image"
+                    />
+                  </figure>
+                  <div class="journal__post-text">
+                    <p>
+                      9PBR in Maharashtra, India, involves plumbing and
+                      firefighting works for a residential building with a
+                      structure comprising two basements, a ground steel floor,
+                      a first-floor podium, and twelve habitable floors. This
+                      project is designed to deliver high-quality living spaces
+                      with robust infrastructure and safety features.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p class="copy">Copyright © 2024 CHAZOWN. All rights Reserved</p>
+    </footer>
+    <script rel="preload" src="./pace.min.js"></script>
+    <script rel="preload" src="./app.min.js"></script>
+  </body>
 </html>

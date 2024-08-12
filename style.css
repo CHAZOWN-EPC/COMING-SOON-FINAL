@@ -15207,8 +15207,8 @@ footer .copy {
     height: 158px;
     overflow: hidden;
     margin-bottom: 2em;
-    border: 1px solid var(--periwinkle-blue);
-    padding: .5em;
+    /* border: 1px solid var(--periwinkle-blue);
+    padding: .5em; */
     border-radius: 14px
 }
 
@@ -15964,7 +15964,7 @@ footer .copy {
 }
 
 .notify-user__title {
-    font-size: 2.2rem;
+    font-size: 1rem;
     font-weight: 400;
     font-style: normal
 }
@@ -15977,13 +15977,13 @@ footer .copy {
 
 @media (min-width: 1100px) and (min-height:680px) {
     .notify-user__title {
-        font-size:1.6rem
+        font-size:1rem
     }
 }
 
 @media (min-width: 1280px) {
     .notify-user__title {
-        font-size:2.4rem
+        font-size:1.7rem
     }
 }
 
